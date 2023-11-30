@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Dummy Website</title>
+</head>
+<body>
+	<h1>Dummy Website</h1>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+	<button>Click me</button>
+
+
+<script type='text/javascript'>
+function initEmbeddedMessaging() {
+	try {
+		embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+		window.addEventListener("onEmbeddedMessagingReady", () => {     
+		console.log( "Inside Prechat API!!" ); 
+		 embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields( { "First_Name" : "Anuj","Last_Name" : "Kumar","Email" : "upendra.singh@proseraa.com","Client Name" : "ChevronTraining4","Client User Type" : "Buyer" } );
+		  });
+		embeddedservice_bootstrap.init(
+			'00DN0000000FH6T',
+			'SmartLocal',
+			'https://gepuat--uat.sandbox.my.site.com/ESWSmartLocal1700214312423',
+			{
+				scrt2URL: 'https://gepuat--uat.sandbox.my.salesforce-scrt.com'
+			}
+		);
+	} catch (err) {
+		console.error('Error loading Embedded Messaging: ', err);
+	}
+};
+</script>
+<script type='text/javascript' src='https://gepuat--uat.sandbox.my.site.com/ESWSmartLocal1700214312423/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+</body>
+</html>
